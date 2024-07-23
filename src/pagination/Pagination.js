@@ -11,7 +11,7 @@ const Pagination = ({ pageNumber, setPageNumber }) => {
       justifyContent="center"
       alignItems="center"
       my={5}
-      sx={{ position: 'relative', top: '20px' }} // Adjust the position to align with other elements
+      sx={{ position: 'relative', top: '20px' }} 
     >
       <Button variant="contained" onClick={handlePrevClick} sx={{ mr: 2 }}>
         Prev

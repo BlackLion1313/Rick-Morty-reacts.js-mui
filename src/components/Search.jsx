@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { TextField, Box, Button } from '@mui/material';
+import { TextField, Box, Button, Typography } from '@mui/material';
 
-const Search = ({ setSearch, setSelectedStatus, selectedStatus }) => { 
+const Search = ({ setSearch, setSelectedStatus, selectedStatus, hasResults }) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchChange = (e) => {
@@ -14,17 +14,18 @@ const Search = ({ setSearch, setSelectedStatus, selectedStatus }) => {
   };
 
   return (
-    <Box display='flex' justifyContent='center' flexDirection='column' alignItems='center' mb={5} sx={{ mt: 4 }}>
+    <Box display="flex" flexDirection="column" alignItems="center" mb={5} sx={{ width: '100%' }}>
       <TextField
         onChange={handleSearchChange}
         value={searchValue}
-        placeholder='Search...'
-        type='text'
-        variant='outlined'
-        size='medium'
-        margin='normal'
+        placeholder="Search..."
+        type="text"
+        variant="outlined"
+        size="medium"
+        margin="normal"
         sx={{
           width: '50%',
+          maxWidth: 400,
           '& .MuiOutlinedInput-root': {
             borderRadius: 2,
             boxShadow: 3,
@@ -37,7 +38,7 @@ const Search = ({ setSearch, setSelectedStatus, selectedStatus }) => {
           },
         }}
       />
-      <Box display='flex' justifyContent='center' mt={2}>
+      <Box display="flex" justifyContent="center" mt={2}>
         {['All', 'Alive', 'Dead'].map((status, index) => (
           <Button
             key={index}
@@ -49,9 +50,14 @@ const Search = ({ setSearch, setSelectedStatus, selectedStatus }) => {
           </Button>
         ))}
       </Box>
+  
+      {!hasResults && searchValue && (
+        <Typography variant="subtitle1" color="textSecondary" mt={2}>
+          No results found for "{searchValue}". Please try again.
+        </Typography>
+      )}
     </Box>
   );
-}
+};
 
 export default Search;
-

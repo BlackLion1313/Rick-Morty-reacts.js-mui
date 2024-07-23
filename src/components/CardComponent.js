@@ -11,9 +11,10 @@ const CardComponent = ({ character }) => {
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
       sx={{
-        width: '280px', // Фиксированная ширина карточки
-        height: '370px', // Фиксированная высота карточки
-        margin: '20px', // Пространство между карточками
+        width: '100%', 
+        maxWidth: '280px',
+        height: '370px',
+        m: 1, 
         cursor: 'pointer',
         '&:hover': {
           boxShadow: 6,
@@ -30,7 +31,7 @@ const CardComponent = ({ character }) => {
           position: 'relative',
         }}
       >
-        {/* Основная сторона карточки */}
+
         <Box
           sx={{
             backfaceVisibility: 'hidden',
@@ -46,7 +47,7 @@ const CardComponent = ({ character }) => {
             borderRadius: '8px',
             boxShadow: 3,
             backgroundColor: 'white',
-            textAlign: 'center', // Выравнивание текста по центру
+            textAlign: 'center', 
           }}
         >
           <Box sx={{ width: '100%', height: '60%', overflow: 'hidden' }}>
@@ -61,7 +62,6 @@ const CardComponent = ({ character }) => {
           </Box>
         </Box>
 
-        {/* Обратная сторона карточки */}
         <Box
           sx={{
             backfaceVisibility: 'hidden',
@@ -77,7 +77,7 @@ const CardComponent = ({ character }) => {
             borderRadius: '8px',
             boxShadow: 3,
             backgroundColor: 'white',
-            textAlign: 'center', // Выравнивание текста по центру
+            textAlign: 'center', 
           }}
         >
           <Typography variant="h6" fontWeight="bold" sx={{ mb: 1 }}>
