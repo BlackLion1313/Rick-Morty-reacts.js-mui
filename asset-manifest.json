@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-mui-rick-morty/static/css/main.e6c13ad2.css",
+    "main.js": "/react-mui-rick-morty/static/js/main.7c52f039.js",
+    "static/js/453.12bb5100.chunk.js": "/react-mui-rick-morty/static/js/453.12bb5100.chunk.js",
+    "index.html": "/react-mui-rick-morty/index.html",
+    "main.e6c13ad2.css.map": "/react-mui-rick-morty/static/css/main.e6c13ad2.css.map",
+    "main.7c52f039.js.map": "/react-mui-rick-morty/static/js/main.7c52f039.js.map",
+    "453.12bb5100.chunk.js.map": "/react-mui-rick-morty/static/js/453.12bb5100.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.7c52f039.js"
+  ]
+}
