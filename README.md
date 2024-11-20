@@ -1,2 +1,2 @@
-https://blacklion1313.github.io/Rick-Morty-reacts.js-mui/
+https://blacklion1313.github.io/react-mui-rick-morty/
 Rick & Morty App using React.js. Styling MUI
